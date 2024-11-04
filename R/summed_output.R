@@ -12,9 +12,12 @@
 #' @export
 #'
 #' @examples
-#' summed_output(data = oncosim_data_clean, group_vars = c("scr_age", "ppt_rate", "scr_mod", "cohort"), sum_var = "Total_cost_sc_x_ng_treatment")
+#' # Using the function without any grouping or filtering conditions
+#' summed_output(data = oncosim_data_clean, sum_var = "Total_cost_sc_x_ng_treatment")
 #'
+#' # Applying filters by storing filter conditions as an object in the function call
 #' sex_male_year_2007 <- penguins$sex == "male" & penguins$year == 2007
+#'
 #' summed_output(data = penguins, group_vars = c("island", "species"), sum_var = "bill_depth_mm", filter_vars = "sex_male_year_2007", na.rm = TRUE)
 
 
