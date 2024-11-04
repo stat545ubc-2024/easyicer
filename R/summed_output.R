@@ -8,6 +8,11 @@
 #' @param filter_vars variable(s)/column(s) called on to set conditions for filtering. "filter_vars" specifies the type of operation (filter) for the selected variables. Set to TRUE as default so user can select filter conditions or leave the argument unused.
 #' @param na.rm argument specifying how to handle NA values in data when performing sum operation; set to "TRUE" as default to prevent an NA output in the sum operation when the column is passed through the function.
 #'
+#' @importFrom magrittr %>%
+#' @importFrom rlang .data
+#'
+#' @suggests palmerpenguins
+#'
 #' @return A dataframe with a new column named "cumulative" containing the summed output value for each grouping.
 #' @export
 #'
@@ -16,9 +21,9 @@
 #' summed_output(data = palmerpenguins::penguins, sum_var = "body_mass_g")
 #'
 #' # Applying filters by storing filter conditions as an object in the function call
-#' sex_male_year_2007 <- penguins$sex == "male" & penguins$year == 2007
+#' sex_male_year_2007 <- palmerpenguins::penguins$sex == "male" & palmerpenguins::penguins$year == 2007
 #'
-#' summed_output(data = palmerpenguins::penguins, group_vars = c("island", "species"), sum_var = "bill_depth_mm", filter_vars = "sex_male_year_2007", na.rm = TRUE)
+#' summed_output(data = palmerpenguins::penguins, group_vars = c("island", "species"), sum_var = "bill_depth_mm", filter_vars = sex_male_year_2007, na.rm = TRUE)
 
 
 summed_output <- function(data, group_vars = NULL, sum_var, filter_vars = TRUE, na.rm = TRUE) {
