@@ -11,8 +11,6 @@
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data
 #'
-#' @suggests palmerpenguins
-#'
 #' @return A dataframe with a new column named "cumulative" containing the summed output value for each grouping.
 #' @export
 #'
