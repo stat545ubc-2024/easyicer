@@ -1,12 +1,13 @@
 Package: sumvar
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Easy computation for summing numeric columns with user-defined grouping variables and filter conditions
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Brendan", "Chia", , "bchia1212@gmail.com", role = c("aut", "cre"))
+Description: Contains function that sums column of numeric type with grouping and filtering functionality using dplyr pipleine.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Imports: 
+    dplyr,
+    magrittr
