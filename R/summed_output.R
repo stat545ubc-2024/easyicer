@@ -18,12 +18,17 @@
 #'
 #' @examples
 #' # Using the function without any grouping or filtering conditions
-#' summed_output(data = palmerpenguins::penguins, sum_var = "body_mass_g")
+#' summed_output(data = palmerpenguins::penguins,
+#'               sum_var = "body_mass_g")
 #'
 #' # Applying filters by storing filter conditions as an object in the function call
 #' sex_male_year_2007 <- palmerpenguins::penguins$sex == "male" & palmerpenguins::penguins$year == 2007
 #'
-#' summed_output(data = palmerpenguins::penguins, group_vars = c("island", "species"), sum_var = "bill_depth_mm", filter_vars = sex_male_year_2007, na.rm = TRUE)
+#' summed_output(data = palmerpenguins::penguins,
+#'               group_vars = c("island", "species"),
+#'               sum_var = "bill_depth_mm",
+#'               filter_vars = sex_male_year_2007,
+#'               na.rm = TRUE)
 
 
 summed_output <- function(data, group_vars = NULL, sum_var, filter_vars = TRUE, na.rm = TRUE) {
