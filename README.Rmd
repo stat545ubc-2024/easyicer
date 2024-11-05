@@ -33,7 +33,6 @@ You can install the development version of sumvar like so:
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-library(sumvar)
 ## basic example code
 ```
 
