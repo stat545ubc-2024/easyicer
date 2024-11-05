@@ -26,8 +26,6 @@ test_that("na.rm argument handles NA values correctly", {
 
   expect_equal(function_result_narm_true, expected_result_narm_true)
 
-  rm(list = c("function_result_narm_true", "expected_result_narm_true"))
-
   # Test that NA values are present in output when na.rm = FALSE
 
   function_result_narm_false <- summed_output(
@@ -41,8 +39,6 @@ test_that("na.rm argument handles NA values correctly", {
     dplyr::summarize(cumulative = sum(bill_depth_mm, na.rm = FALSE))
 
   expect_equal(function_result_narm_false, expected_result_narm_false)
-
-  rm(list = c("function_result_narm_false", "expected_result_narm_false"))
 
 })
 
@@ -63,6 +59,5 @@ test_that("filter is working; non-filtered output column length is greater than 
 
   expect_gt(length(no_filter_result$cumulative), length(filter_result$cumulative))
 
-  rm(list = c("no_filter_result", "filter_result", "adelie_2007"))
 
 })
