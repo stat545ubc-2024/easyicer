@@ -3,7 +3,7 @@ Title: Easy computation for summing numeric columns with user-defined grouping v
 Version: 0.1.0
 Authors@R: 
     person("Brendan", "Chia", , "bchia1212@gmail.com", role = c("aut", "cre"))
-Description: Contains function that sums column of numeric type with grouping and filtering functionality using dplyr pipleine.
+Description: This R package contains the `summed_output()` function which takes a column as a character string storing a vector of numeric values within a dataframe and calculates the sum of the vector. It is designed to help users automate repetitive sum operations based on user-defined variable groupings and filter conditions. This package contains **magrittr** and **rlang** as dependencies to support compatibility with tidy evaluation.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
