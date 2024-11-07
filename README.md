@@ -15,11 +15,10 @@ groupings and filter conditions. This package contains **magrittr** and
 
 ## Installation
 
-You can install the development version of sumvar from
-[GitHub](https://github.com/stat545ubc-2024/assignment-b2-bchia9) with:
+You can install the development version of sumvar with:
 
     install.packages("devtools")
-    devtools::install_github("stat545ubc-2024/assignment-b2-bchia9", ref = "1.0.3")
+    devtools::install_github("stat545ubc-2024/sumvar", ref = "1.0.4")
 
 ## Usage
 
