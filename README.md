@@ -1,24 +1,27 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# sumvar
+# easyicer
 
 <!-- badges: start -->
 <!-- badges: end -->
 
 This R package contains the `summed_output()` function which takes a
 column as a character string storing a vector of numeric values within a
-dataframe and calculates the sum of the vector. It is designed to help
+dataframe and calculates the sum of the vector. The `icercalc()` and
+`icerplot()` functions can be used to calculate and plot ICER values
+based on inputs obtained from `summed_output()`. It is designed to help
 users automate repetitive sum operations based on user-defined variable
-groupings and filter conditions. This package contains **magrittr** and
-**rlang** as dependencies to support compatibility with tidy evaluation.
+groupings and filter conditions and repeat ICER analyses. This package
+contains **magrittr** and **rlang** as dependencies to support
+compatibility with tidy evaluation.
 
 ## Installation
 
-You can install the development version of sumvar with:
+You can install the development version of easyicer with:
 
     install.packages("devtools")
-    devtools::install_github("stat545ubc-2024/sumvar", ref = "1.0.4")
+    devtools::install_github("stat545ubc-2024/easyicer", ref = "1.1.0")
 
 ## Usage
 
@@ -26,7 +29,7 @@ Here is a basic example of using this package with the
 `palmerpenguins::penguins` dataset:
 
 ``` r
-library(sumvar)
+library(easyicer)
 library(palmerpenguins)
 
 # Create a filter condition and store as an object

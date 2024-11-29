@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(sumvar)
+library(easyicer)
 
-test_check("sumvar")
+test_check("easyicer")
