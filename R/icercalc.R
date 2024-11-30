@@ -33,7 +33,7 @@
 
 icercalc <- function(data, rev = c("neither", "rows", "columns", "both")) {
   if(!all(sapply(data,is.numeric))) {
-    stop("Object is not numeric. Your object contains columns of class: ", paste(unique(sapply(data, class)), collapse = ", "))
+    stop("Object is not numeric. Your object contains values of class: ", paste(unique(sapply(data, class)), collapse = ", "))
   }
   if(!is.matrix(data)) {
     stop("Object structure is not accepted. Object must be in matrix format.")
