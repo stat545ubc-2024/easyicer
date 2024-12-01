@@ -55,8 +55,13 @@ icercalc <- function(data, rev = c("neither", "rows", "columns", "both")) {
   print("Modified matrix:")
   print(data) # Print modified matrix after applying rev argument
 
-  icer <- (data[1,2] - data[1,1]) / (data[2,2] - data[2,1])
+  icercost <- (data[1,2] - data[1,1]) # Incremental cost calculation
+  icerqaly <- (data[2,2] - data[2,1]) # Incremental QALY calculation
 
-  print(icer)
+  icer <- icercost/icerqaly # ICER calculation
+
+  cat("\nIncremental Cost:\n", icercost, "\n") # It is important to print both the numerator and denominator independently for plotting purposes
+  cat("Incremental QALY:\n", icerqaly, "\n")
+  cat("Incremental cost-effectiveness ratio (ICER):\n", icer, "\n")
 }
 
