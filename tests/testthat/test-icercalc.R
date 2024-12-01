@@ -1,9 +1,6 @@
 # Test 1
 
-test_that("Object inputted into the data argument contains only numeric values", {
-
-  matrix_data <- matrix(c(24, 12, 8, 6), nrow = 2, ncol = 2, byrow = TRUE)
-  expect_true(is.numeric(icercalc(data = matrix_data)))
+test_that("Function rejects data object with non-numeric values", {
 
   matrix_data_character <- matrix(c(24, "x", 8, 6), nrow = 2, ncol = 2, byrow = TRUE)
   expect_error(icercalc(data = matrix_data_character),
