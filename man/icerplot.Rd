@@ -4,7 +4,7 @@
 \alias{icerplot}
 \title{Plot ICERs on a cost-effectiveness plane with incremental effectiveness and incremental cost plotted on the x and y axes, respectively.}
 \usage{
-icerplot(data, x, y, names = NULL)
+icerplot(data, x, y, names = NULL, na.rm = TRUE)
 }
 \arguments{
 \item{data}{A dataframe containing at least two numeric columns of identical length.}
@@ -14,6 +14,8 @@ icerplot(data, x, y, names = NULL)
 \item{y}{A variable in the dataframe containing only numeric values. Input incremental cost for ICER plot.}
 
 \item{names}{An argument to include strategy/intervention names from dataframe in the plot legend. Set to NULL as default. If NULL, labels will default to random letters in alphabetical order based on nrows in dataframe.}
+
+\item{na.rm}{An argument specifying how to handle NA values in data before creating a plot; set to "TRUE" as default.}
 }
 \value{
 A scatter plot with a figure legend.

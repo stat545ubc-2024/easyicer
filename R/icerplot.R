@@ -6,6 +6,7 @@
 #' @param x A variable in the dataframe containing only numeric values. Input incremental effectiveness (i.e., QALY) for ICER plot.
 #' @param y A variable in the dataframe containing only numeric values. Input incremental cost for ICER plot.
 #' @param names An argument to include strategy/intervention names from dataframe in the plot legend. Set to NULL as default. If NULL, labels will default to random letters in alphabetical order based on nrows in dataframe.
+#' @param na.rm An argument specifying how to handle NA values in data before creating a plot; set to "TRUE" as default.
 #'
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 aes
@@ -15,6 +16,7 @@
 #' @importFrom ggplot2 guide_legend
 #' @importFrom cowplot theme_cowplot
 #' @importFrom dplyr %>%
+#' @importFrom dplyr filter
 #' @importFrom dplyr mutate
 #' @importFrom dplyr n
 #'
@@ -35,17 +37,22 @@
 #' icerplot(data = icers, x = "effect", y = "cost", names = "intervention")
 
 
-icerplot <- function(data, x, y, names = NULL) {
+icerplot <- function(data, x, y, names = NULL, na.rm = TRUE) {
+
+  # Ensure data is in dataframe format
+  if (!is.data.frame(data)) {
+    stop("data input must be a dataframe. Your object is of structure: ", class(data))
+  }
 
   # Ensure that x and y exist in the data
   if (!(x %in% colnames(data)) || !(y %in% colnames(data))) {
-    stop("x or y column does not exist in the data frame.")
+    stop("x and/or y column does not exist in the data frame.")
   }
 
   # Ensure name in argument exists in data
   if (!is.null(names)) {
     if (!(names %in% colnames(data))) {
-      stop("The specified 'name' column does not exist in the data frame.")
+      stop("The specified 'names' argument does not exist in the data frame.")
     }
   }
 
@@ -54,15 +61,11 @@ icerplot <- function(data, x, y, names = NULL) {
     stop("Both x and y inputs must contain only numeric values.")
   }
 
-  # Ensure vector lengths of inputs are identical
-  if (!is.null(names)) {
-  if (length(x) != length(y) || length(x) != length(names) || length(y) != length(names)) {
-    stop("All input lists must be of same length.")
+  # Conditional formatting if na.rm = TRUE to remove NA values
+  if (na.rm) {
+    data <- data %>%
+      dplyr::filter(!is.na(.data[[x]]), !is.na(.data[[y]]))
   }
-  } else {
-    if (length(x) != length(y))
-      stop("Numeric lists are not of same length.")
-}
 
   # Conditional plotting using ggplot
 
@@ -84,7 +87,7 @@ icerplot <- function(data, x, y, names = NULL) {
         row_id = seq_len(dplyr::n()),
         legend_label = factor(row_id, labels = LETTERS[seq_len(dplyr::n())])
       )
-
+    # Conditional formatting if names argument is not specified
     ggplot2::ggplot(data, ggplot2::aes(x = .data[[x]], y = .data[[y]], color = legend_label)) +
       ggplot2::geom_point(size = 2) +
       ggplot2::labs(
