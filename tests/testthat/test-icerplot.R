@@ -96,7 +96,7 @@ test_that("function properly maps legend labels when names argument is NULL", {
     effect = c(1, 2, 3, 3, 4),
     cost = c(2, 4, 6, 2, 8))
 
-  # Generate plot structure for testing using native ggplot2 and this package function
+  # Generate plot structure for testing equality using native ggplot2 and this package function
 
   # Using ggplot2
   gg_plot <- ggplot2::ggplot(test_df, ggplot2::aes(effect, cost, color = intervention)) +
@@ -117,6 +117,6 @@ test_that("function properly maps legend labels when names argument is NULL", {
   my_plot_str <- ggplot2::ggplot_build(my_plot)
   gg_plot_str <- ggplot2::ggplot_build(gg_plot)
 
-  # Test that labels are equal
+  # Test that legend labels are equal
   expect_equal(my_plot_str$plot$guides$color, gg_plot_str$plot$guides$color)
 })
