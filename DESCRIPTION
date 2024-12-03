@@ -1,16 +1,17 @@
 Package: easyicer
 Title: Set of functions for easy computation and plotting of ICERs
-Version: 1.1.0
+Version: 1.2.0
 Authors@R: 
     person("Brendan", "Chia", , "bchia1212@gmail.com", role = c("aut", "cre"))
-Description: This R package contains 3 functions: `summed_output()`, `icercalc`, and `icerplot` which together can be used to sum numeric columns to obtain ICER inputs, calculate and plot ICERs. This package contains **magrittr** and **rlang** as dependencies to support compatibility with tidy evaluation.
+Description: This R package contains 3 functions: `summed_output()`, `icercalc`, and `icerplot` which together can be used to sum numeric columns to obtain ICER inputs, calculate and plot ICERs. This package contains multiple dependencies to support syntax compatibility and plotting.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports: 
+    cowplot,
     dplyr,
-    magrittr,
+    ggplot2,
     rlang
 Suggests: 
     palmerpenguins,
