@@ -13,15 +13,15 @@ dataframe and calculates the sum of the vector. The `icercalc()` and
 based on inputs obtained from `summed_output()`. It is designed to help
 users automate repetitive sum operations based on user-defined variable
 groupings and filter conditions and repeat ICER analyses. This package
-contains **magrittr** and **rlang** as dependencies to support
-compatibility with tidy evaluation.
+contains multiple dependencies to support syntax compatibility and
+plotting with ggplot2.
 
 ## Installation
 
 You can install the development version of easyicer with:
 
     install.packages("devtools")
-    devtools::install_github("stat545ubc-2024/easyicer", ref = "1.1.0")
+    devtools::install_github("stat545ubc-2024/easyicer", ref = "1.2.0")
 
 ## Usage
 

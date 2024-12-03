@@ -8,7 +8,12 @@
 #' @param filter_vars variable(s)/column(s) called on to set conditions for filtering. "filter_vars" specifies the type of operation (filter) for the selected variables. Set to TRUE as default so user can select filter conditions or leave the argument unused.
 #' @param na.rm argument specifying how to handle NA values in data when performing sum operation; set to "TRUE" as default to prevent an NA output in the sum operation when the column is passed through the function.
 #'
-#' @importFrom magrittr %>%
+#' @importFrom dplyr %>%
+#' @importFrom dplyr filter
+#' @importFrom dplyr group_by
+#' @importFrom dplyr across
+#' @importFrom dplyr all_of
+#' @importFrom dplyr summarize
 #' @importFrom rlang .data
 #'
 #' @return A dataframe with a new column named "cumulative" containing the summed output value for each grouping.
