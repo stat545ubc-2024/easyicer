@@ -1,0 +1,23 @@
+---
+title: "Transforming raw data into ICER plots using the easyicer package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Transforming raw data into ICER plots using the easyicer package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(easyicer)
+```
+
+### Introduction
+
+This vignette is a tutorial on how to seamlessly create incremental cost-effectiveness ratio (ICER) analyses, including plots, by making use of all the functions in this package. This package was designed in a pipeline structure so that the end-user could cohesively deploy the package functions in a step-wise manner to arrive at a final cost-effectiveness analysis (CEA) with ICER plots. The target domain for this package is health technology and economics, where CEAs are a common tool for evaluating the risk-benefit of new interventions for implementation. 
