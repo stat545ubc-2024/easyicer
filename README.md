@@ -18,15 +18,15 @@ plotting with ggplot2.
 
 ## Installation
 
-You can install the development version of easyicer with:
+You can install the latest version of easyicer with:
 
     install.packages("devtools")
     devtools::install_github("stat545ubc-2024/easyicer", ref = "1.2.0")
 
 ## Usage
 
-Here is a basic example of using this package with the
-`palmerpenguins::penguins` dataset:
+Here is a basic example of using the `summed_output()` function with
+this package with the `palmerpenguins::penguins` dataset:
 
 ``` r
 library(easyicer)
@@ -50,3 +50,6 @@ summed_output(data = palmerpenguins::penguins,
 #> 4 Dream     Chinstrap      249. 
 #> 5 Torgersen Adelie         143.
 ```
+
+\*For more detailed usage of this package, please refer to the vignette
+for this package.
