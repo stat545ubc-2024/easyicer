@@ -1,6 +1,6 @@
 Package: easyicer
 Title: Set of functions for easy computation and plotting of ICERs
-Version: 1.2.0
+Version: 2.0.0
 Authors@R: 
     person("Brendan", "Chia", , "bchia1212@gmail.com", role = c("aut", "cre"))
 Description: This R package contains 3 functions: `summed_output()`, `icercalc`, and `icerplot` which together can be used to sum numeric columns to obtain ICER inputs, calculate and plot ICERs. This package contains multiple dependencies to support syntax compatibility and plotting.
@@ -21,3 +21,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
+URL: https://stat545ubc-2024.github.io/easyicer/
