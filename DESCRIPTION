@@ -22,3 +22,6 @@ Suggests:
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 URL: https://stat545ubc-2024.github.io/easyicer/
+Depends: 
+    R (>= 2.10)
+LazyData: true

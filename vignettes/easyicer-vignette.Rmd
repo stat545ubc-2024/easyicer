@@ -29,7 +29,7 @@ The data used in this tutorial is a modified dataset obtained from the authors' 
 
 ```{r}
 # Load the "here" package to access the .csv file in the data folder if you are in the source package repository.
-easyicer_data <- read.csv(here::here("data/easyicer_example_data.csv"))
+easyicer_data <- read.csv(here::here("data/easyicer_data.csv"))
 
 dim(easyicer_data)
 
