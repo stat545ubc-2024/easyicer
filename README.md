@@ -8,22 +8,27 @@
 
 This R package is designed as an integrated pipeline with multiple
 interconnected functions that can take raw health economic data to
-create cost-effectiveness analyses. It contains the `summed_output()`
-function which takes a column as a character string storing a vector of
-numeric values within a dataframe and calculates the sum of the vector.
-The `icercalc()` and `icerplot()` functions can be used to calculate and
-plot ICER values based on inputs obtained from `summed_output()`. It is
-designed to help users automate repetitive sum operations based on
-user-defined variable groupings and filter conditions and repeat ICER
-analyses. This package contains multiple dependencies to support syntax
-compatibility and plotting with ggplot2.
+create cost-effectiveness analyses. The functions can be used cohesively
+in a step-wise manner or deployed standalone depending on the data
+structures used. It contains the `summed_output()` function which takes
+a column as a character string storing a vector of numeric values within
+a dataframe and calculates the sum of the vector. The `icercalc()` and
+`icerplot()` functions can be used to calculate and plot ICER values
+based on inputs obtained from `summed_output()`. It is designed to help
+users automate repetitive sum operations based on user-defined variable
+groupings and filter conditions, and create ICER analyses. An integrated
+dataset is included in the source files for this package that was used
+to demonstrate package functionality in the package vignette. The raw
+dataset can be located in this package’s repository on GitHub. This
+package contains multiple dependencies to support syntax compatibility
+and plotting with ggplot2.
 
 ## Installation
 
 You can install the latest version of easyicer with:
 
     install.packages("devtools")
-    devtools::install_github("stat545ubc-2024/easyicer", ref = "2.0.0")
+    devtools::install_github("stat545ubc-2024/easyicer", ref = "2.0.1")
 
 ## Usage
 
