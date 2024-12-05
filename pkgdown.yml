@@ -1,0 +1,9 @@
+pandoc: 3.1.11
+pkgdown: 2.1.1
+pkgdown_sha: ~
+articles:
+  easyicer-vignette: easyicer-vignette.html
+last_built: 2024-12-05T07:12Z
+urls:
+  reference: https://stat545ubc-2024.github.io/easyicer/reference
+  article: https://stat545ubc-2024.github.io/easyicer/articles
